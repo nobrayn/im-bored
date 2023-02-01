@@ -1,0 +1,35 @@
+body {
+  text-align: center;
+  background-color: #2F3C7E;
+  color: #FBEAEB;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0 60px 0;
+}
+
+.formLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.formRight {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: inline-block;
+  width: fit-content;
+  margin: 9px 30px 9px 0px;
+}
+
+select {
+  width: 175px;
+  margin: 8px 30px 8px 0px;
+  text-align: center;
+}
