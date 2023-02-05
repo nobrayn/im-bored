@@ -2,34 +2,51 @@ body {
   text-align: center;
   background-color: #2F3C7E;
   color: #FBEAEB;
+  font-size: 62.5%;
+}
+
+.App {
+  /* height: calc(100vh - 80px); */
 }
 
 .formContainer {
+  margin-top: 100px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+.block {
+  display: flex;
+  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
-  margin: 40px 0 60px 0;
-}
-
-.formLeft {
-  display: flex;
-  flex-direction: column;
-}
-
-.formRight {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 16px;
 }
 
 label {
-  display: inline-block;
-  width: fit-content;
-  margin: 9px 30px 9px 0px;
+  font-size: 1.2rem;
+  min-width: 30%;
+  text-align: left;
 }
 
 select {
-  width: 175px;
-  margin: 8px 30px 8px 0px;
-  text-align: center;
+  min-width: 20%;
+}
+
+button {
+  margin-top: 40px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-top: 100px;
 }

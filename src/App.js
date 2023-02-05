@@ -63,8 +63,9 @@ function App() {
       {/* passing props to UserOptions */}
       <UserOptions getData={getData}/>
       <div>
-        <h2>{response}</h2>
-        <button onClick={'fart'}>Try again?</button>
+        <h2>Why don't you try and...</h2>
+        <h3>{response}</h3>
+        <button className='again' onClick={'fart'}>Try again?</button>
       </div>
     </div>
   );
