@@ -4,10 +4,12 @@ import axios from 'axios';
 // components
 import UserOptions from './Components/UserOptions';
 
+// stylesheet
 import './App.css'
 
 function App() {
-  const [response, setResponse] = useState('');
+  const [boredResponse, setBoredResponse] = useState('');
+  const [showForm, setShowForm] = useState(true);
 
   // props for UserOptions
   const getData = async (activity, price, people) => {
@@ -36,7 +38,7 @@ function App() {
       maxParticipants = 6
     }
 
-
+    // boredAPI
     // construct base URL
     const url = new URL('http://www.boredapi.com/api/activity?');
     // adding chosen parameters
@@ -50,23 +52,38 @@ function App() {
     // console.log(url)
     // try/catch for error handling
     try {
-      const data = await axios.get(url);
-      setResponse(data.data.activity);
+      const response = await axios.get(url);
+      setBoredResponse(response.data.activity);
+      if (response.data.error) {
+        // add some stateful message
+        // sweet alerts npm package
+        alert('No activities available with chosen parameters. Please try another combo.')
+      }
+
     } catch (error) {
-      // err handle
-      console.log('error, dingus')
+      // error handle
+      // console.log(error);
+      alert('Something went horribly awry. Please try again. And if you see this again, try something very different. If you still see this, I have failed you.')
     }
   }
 
   return (
     <div>
       {/* passing props to UserOptions */}
-      <UserOptions getData={getData}/>
+      <UserOptions
+        getData={ getData }
+        showForm={ showForm }
+        setShowForm={ setShowForm }
+      />
+
+      {
+      !showForm && (
       <div>
         <h2>Why don't you try and...</h2>
-        <h3>{response}</h3>
-        <button className='again' onClick={'fart'}>Try again?</button>
+        <h3>{boredResponse}</h3>
+        {/* <button className='again' onClick={}>Try again?</button> */}
       </div>
+      )}
     </div>
   );
 }
