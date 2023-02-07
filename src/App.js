@@ -54,10 +54,10 @@ function App() {
     // price
     if (price === 'cheap') {
       minPrice = 0.1
-      maxPrice = 0.3
+      maxPrice = 0.2
     }
     if (price === 'notCheap') {
-      minPrice = 0.4
+      minPrice = 0.3
       maxPrice = 1
     }
 
@@ -73,7 +73,7 @@ function App() {
 
     // boredAPI
     // construct base URL
-    const url = new URL('http://www.boredapi.com/api/activity?');
+    const url = new URL('https://www.boredapi.com/api/activity?');
     // adding chosen parameters
     url.search = new URLSearchParams({
       type: activity,
