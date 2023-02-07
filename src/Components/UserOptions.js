@@ -9,7 +9,7 @@ const UserOptions = (props) => {
     userNumberChoice,
     disableNumberMenu } = props;
 
-  // array, map method.
+  // for the following.. stretch goal is to store the options for the 3 selects below in arrays, use a .map method to access/display them.
 
   return (
     showForm && (
