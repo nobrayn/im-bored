@@ -54,10 +54,10 @@ function App() {
     // price
     if (price === 'cheap') {
       minPrice = 0.1
-      maxPrice = 0.4
+      maxPrice = 0.3
     }
     if (price === 'notCheap') {
-      minPrice = 0.5
+      minPrice = 0.4
       maxPrice = 1
     }
 
