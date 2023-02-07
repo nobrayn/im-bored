@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import swal from 'sweetalert';
 
 // components
 import UserOptions from './Components/UserOptions';
@@ -87,15 +88,32 @@ function App() {
       const response = await axios.get(url);
       setBoredResponse(response.data.activity);
       if (response.data.error) {
-        // add some stateful message
         // sweet alerts npm package
-        alert('No activities available with chosen parameters. Please try another combo.')
-      }
+        swal({
+          icon: 'error',
+          text: 'No activities available with chosen parameters. Please try another combination.'
+        }).then(() => {
+          handleStartOverAlert()
+        })
+      };
 
     } catch (error) {
       // error handle
-      alert('Something went horribly awry. Please try again. And if you see this again, try something very different. If you still see this, I have failed you.')
+      swal({
+        icon: 'error',
+        text: 'Something went horribly awry. Please try again. And if you see this again, try something very different. If you still see this, I have failed you.'
+      }).then(() => {
+        handleStartOverAlert()
+      })
     }
+  }
+
+  const handleStartOverAlert = () => {
+    setShowForm(showForm);
+    setUserTypeChoice('');
+    setUserPriceChoice('');
+    setUserNumberChoice('');
+    setDisableNumberMenu(false);
   }
 
   const handleStartOver = () => {
@@ -125,9 +143,12 @@ function App() {
 
       {
         !showForm && (
-          <div>
-            <h2>Why don't you try and...</h2>
+          <div className='results'>
+            <h1>Why don't you try and...</h1>
             <h3>{boredResponse}</h3>
+            <h4>Not for you? Try again with the same parameters
+              or start over from the beginning!</h4>
+            <div className="resetButtons">
             <button
               className='tryAgain'
               onClick={() => getData(userTypeChoice, userPriceChoice, userNumberChoice)}>Try again?</button>
@@ -135,6 +156,7 @@ function App() {
             <button
               className='startOver'
               onClick={handleStartOver}>Start over?</button>
+            </div> 
           </div>
         )}
     </div>
