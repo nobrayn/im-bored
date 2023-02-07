@@ -49,7 +49,6 @@ function App() {
       minparticipants: minParticipants,
       maxparticipants: maxParticipants
     });
-    // console.log(url)
     // try/catch for error handling
     try {
       const response = await axios.get(url);
@@ -62,7 +61,6 @@ function App() {
 
     } catch (error) {
       // error handle
-      // console.log(error);
       alert('Something went horribly awry. Please try again. And if you see this again, try something very different. If you still see this, I have failed you.')
     }
   }

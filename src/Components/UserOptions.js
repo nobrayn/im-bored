@@ -13,25 +13,19 @@ const UserOptions = ({getData, showForm, setShowForm}) => {
     // the BoredAPI only has "solo" activities for these, so the number/people menu is set to "solo" and greyed out (logic below, in return statement)
     if (e.target.value === "relaxation" || e.target.value === "diy" || e.target.value === "charity" || e.target.value === "busywork") {
       setDisableNumberMenu(true);
-      console.log(e.target.value)
+      setUserNumberChoice("solo")
     } else {
       setDisableNumberMenu(false)
-      console.log(e.target.value)
     }
   }
-  
-  // FIX!
-
 
   // stretch goal: combine these into one function
   const handleUserPriceChoice = (e) => {
     setUserPriceChoice(e.target.value)
-    console.log(e.target.value)
   }
 
   const handleUserNumberChoice = (e) => {
     setUserNumberChoice(e.target.value)
-    console.log(e.target.value)
   }
 
   const handleSubmit = (e) => {
