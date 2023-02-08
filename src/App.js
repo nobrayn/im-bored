@@ -91,7 +91,7 @@ function App() {
       const response = await axios.get(url);
       setBoredResponse(response.data.activity);
       if (response.data.error) {
-        // sweet alerts npm package
+        // error handle via sweetalerts
         MySwal.fire({
           button: "Aw crap.",
           text: 'No activities available with chosen parameters. Please try another combination.',
@@ -107,7 +107,7 @@ function App() {
       };
 
     } catch (error) {
-      // error handle
+      // extreme error handle via sweetalerts
       Swal({
         button: "Aw crap.",
         text: 'Something went horribly awry. Please try again. And if you see this again, try something very different. If you still see this, I have failed you.',
@@ -122,6 +122,7 @@ function App() {
     }
   }
 
+  // mimics a page refresh from an error message
   const handleStartOverAlert = () => {
     setShowForm(showForm);
     setUserTypeChoice('');
@@ -130,6 +131,7 @@ function App() {
     setDisableNumberMenu(false);
   }
 
+  // mimics a page refresh from "Start Over?" button event
   const handleStartOver = () => {
     setShowForm(!showForm);
     setUserTypeChoice('');
@@ -163,12 +165,14 @@ function App() {
           <div className="wrapper">
             <div className={showStyling ? 'crt' : ''}>
               <h1>Why don't you try and...</h1>
+              {/* response from API here */}
               <h3>{boredResponse}</h3>
               <h4>Not for you? Try again with the same parameters
                 or start over from the beginning!</h4>
               <div className="resetBtns">
                 <button
                   className='tryAgain'
+                  // Uses the same data the user chose to run another inquiry to the API
                   onClick={() => getData(userTypeChoice, userPriceChoice, userNumberChoice)}>Try again?</button>
                 {/* change showForm from false to true, reset values in form */}
                 <button
