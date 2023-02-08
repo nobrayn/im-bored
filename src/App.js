@@ -5,7 +5,6 @@ import withReactContent from 'sweetalert2-react-content'
 
 // components
 import UserOptions from './Components/UserOptions';
-import CrtMode from './Components/CrtMode';
 
 // stylesheet
 import './styles/sass/App.scss'
