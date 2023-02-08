@@ -1,0 +1,52 @@
+html {
+  font-size: 62.5%;
+  // max-width: 1000px;
+  // margin-left: auto;
+  // margin-right: auto;
+  // background-color: black;
+}
+
+body {
+  text-align: center;
+  background-color: $primary;
+  color: $secondary;
+  font-family: $baseFont;
+  border: 40px solid $tertiary;
+  height: calc(100vh - 0px);
+}
+
+.wrapper {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.resetBtns {
+  position: relative;
+}
+
+.crtBtn {
+  width: 100px;
+  margin: auto;
+  position: absolute;
+  bottom: 44px;
+  right: 44px;
+  button {
+    font-size: 1.4rem;
+  }
+}

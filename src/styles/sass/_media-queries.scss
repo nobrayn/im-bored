@@ -1,0 +1,21 @@
+@media (max-width: 675px) {
+  .block {
+    flex-direction: column;
+    label {
+      text-align: center;
+      margin: 10px 0px;
+    }
+    select {
+      padding: 2px;
+    }
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    margin-bottom: 10px;
+  }
+  .submit {
+    margin-top: 10px;
+  }
+}

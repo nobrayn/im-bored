@@ -1,12 +1,16 @@
 import { useState } from 'react';
 import axios from 'axios';
-import swal from 'sweetalert';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content'
 
 // components
 import UserOptions from './Components/UserOptions';
+import CrtMode from './Components/CrtMode';
 
 // stylesheet
-import './App.css'
+import './styles/sass/App.scss'
+
+const MySwal = withReactContent(Swal)
 
 function App() {
   const [boredResponse, setBoredResponse] = useState('');
@@ -15,7 +19,7 @@ function App() {
   const [userPriceChoice, setUserPriceChoice] = useState('');
   const [userNumberChoice, setUserNumberChoice] = useState('');
   const [disableNumberMenu, setDisableNumberMenu] = useState(false);
-
+  const [showStyling, setShowStyling] = useState(false);
 
   const handleUserTypeChoice = (e) => {
     setUserTypeChoice(e.target.value)
@@ -89,17 +93,22 @@ function App() {
       setBoredResponse(response.data.activity);
       if (response.data.error) {
         // sweet alerts npm package
-        swal({
-          icon: 'error',
-          text: 'No activities available with chosen parameters. Please try another combination.'
-        }).then(() => {
+        MySwal.fire({
+          button: "Aw crap.",
+          text: 'No activities available with chosen parameters. Please try another combination.',
+          imageUrl: 'https://gifdb.com/images/high/elmo-fire-8-bit-pixel-art-uxu21gbmbqrftrm3.gif',
+          imageWidth: 350,
+          imageHeight: 250,
+          imageAlt: '8-bit elmo on fire'
+        })
+        .then(() => {
           handleStartOverAlert()
         })
       };
 
     } catch (error) {
       // error handle
-      swal({
+      Swal({
         icon: 'error',
         text: 'Something went horribly awry. Please try again. And if you see this again, try something very different. If you still see this, I have failed you.'
       }).then(() => {
@@ -139,24 +148,30 @@ function App() {
         userPriceChoice={userPriceChoice}
         userNumberChoice={userNumberChoice}
         disableNumberMenu={disableNumberMenu}
+        showStyling={showStyling}
+        setShowStyling={setShowStyling}
       />
+
 
       {
         !showForm && (
-          <div className='results'>
-            <h1>Why don't you try and...</h1>
-            <h3>{boredResponse}</h3>
-            <h4>Not for you? Try again with the same parameters
-              or start over from the beginning!</h4>
-            <div className="resetButtons">
-            <button
-              className='tryAgain'
-              onClick={() => getData(userTypeChoice, userPriceChoice, userNumberChoice)}>Try again?</button>
-            {/* change showForm from false to true, reset values in form */}
-            <button
-              className='startOver'
-              onClick={handleStartOver}>Start over?</button>
-            </div> 
+          <div className="wrapper">
+            <div className={showStyling ? 'crt' : ''}>
+              <h1>Why don't you try and...</h1>
+              <h3>{boredResponse}</h3>
+              <h4>Not for you? Try again with the same parameters
+                or start over from the beginning!</h4>
+              <div className="resetBtns">
+                <button
+                  className='tryAgain'
+                  onClick={() => getData(userTypeChoice, userPriceChoice, userNumberChoice)}>Try again?</button>
+                {/* change showForm from false to true, reset values in form */}
+                <button
+                  className='startOver'
+                  onClick={handleStartOver}>Start over?</button>
+              </div>
+              <button className="crtBtn" onClick={() => setShowStyling(!showStyling)}>Toggle CRT Effect!</button>
+            </div>
           </div>
         )}
     </div>
