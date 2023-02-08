@@ -98,7 +98,8 @@ function App() {
           imageUrl: 'https://gifdb.com/images/high/elmo-fire-8-bit-pixel-art-uxu21gbmbqrftrm3.gif',
           imageWidth: 350,
           imageHeight: 250,
-          imageAlt: '8-bit elmo on fire'
+          imageAlt: '8-bit elmo on fire',
+          heightAuto: false
         })
         .then(() => {
           handleStartOverAlert()
@@ -108,8 +109,13 @@ function App() {
     } catch (error) {
       // error handle
       Swal({
-        icon: 'error',
-        text: 'Something went horribly awry. Please try again. And if you see this again, try something very different. If you still see this, I have failed you.'
+        button: "Aw crap.",
+        text: 'Something went horribly awry. Please try again. And if you see this again, try something very different. If you still see this, I have failed you.',
+        imageUrl: 'https://gifdb.com/images/high/elmo-fire-8-bit-pixel-art-uxu21gbmbqrftrm3.gif',
+        imageWidth: 350,
+        imageHeight: 250,
+        imageAlt: '8-bit elmo on fire',
+        heightAuto: false
       }).then(() => {
         handleStartOverAlert()
       })
