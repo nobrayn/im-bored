@@ -1,7 +1,9 @@
+// for whatever reason, this does not work on live site, but works fine locally. The alert text is too small. Too look into.
 .swal2-html-container {
   font-size: 2.5em;
 }
 
+// the button text, however, does stay adjusted on the live site.
 .swal2-actions  {
   font-size: 2.25em;
 }
