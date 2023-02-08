@@ -173,6 +173,9 @@ function App() {
             </div>
           </div>
         )}
+      <footer>
+        Copyright 2023 <a href='https://www.nobrayn.com' target={'blank'}> Chris O'Bray </a>- <a href='https://junocollege.com' target={'blank'}>Juno College of Technology</a>
+      </footer>
     </div>
   );
 }
