@@ -15,11 +15,14 @@
   h2 {
     margin-bottom: 10px;
   }
+  h3 {
+    font-size: 4rem;
+  }
   .submit {
     margin-top: 10px;
   }
   .resetBtns {
-    margin-right: 20%;
+    // margin-right: 20%;
     button {
       font-size: 2.2rem;
       margin-right: 10px;
@@ -27,10 +30,25 @@
   }
 }
 
+// resetBtns need a complete rethink for responsiveness. Future goal.
 @media (max-width: 545px) {
   h3 {
     font-size: 3.5rem;
   }
+  .resetBtns {
+    white-space: nowrap;
+    justify-content: space-between;
+    margin-right: 30%;
+    margin-left: 5%;
+    button {
+      font-size: 2rem;
+      margin: 20px 0px 0 0;
+    }
+  }
+  .crtBtn {
+    font-size: 1.5rem;
+  }
+  
 }
 
 @media (max-width: 447px) {
