@@ -1,3 +1,7 @@
+// components
+import AudioPlayer from './AudioPlayer';
+
+
 const UserOptions = (props) => {
   const { showForm,
     handleUserTypeChoice,
@@ -76,11 +80,14 @@ const UserOptions = (props) => {
                 </div> {/* end of block */}
               </div> {/* end of formContainer */}
 
-              <button className="crtBtn" onClick={(e) => {
-                e.preventDefault();
-                setShowStyling(!showStyling);
-              }}>Toggle CRT Effect!</button>
-              <button onClick={handleSubmit} className="submit">Submit</button>
+              <div className="funBtns">
+                <button onClick={handleSubmit} className="submit">Submit</button>
+                <AudioPlayer />
+                <button className="crtBtn" onClick={(e) => {
+                  e.preventDefault();
+                  setShowStyling(!showStyling);
+                }}>Toggle CRT Effect!</button>
+              </div>
             </form>
           </div>
         </div>

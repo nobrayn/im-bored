@@ -54,6 +54,18 @@ body {
   }
 }
 
+.AudioPlayer {
+  width: 100px;
+  height: 80px;
+  margin: auto;
+  position: absolute;
+  bottom: 44px;
+  left: 44px;
+  button {
+    font-size: 1.4rem;
+  }
+}
+
 footer {
   position: absolute;
   bottom: 10px;
