@@ -1,6 +1,9 @@
 # I'm Bored!
 Not sure what to do with your time? Got some friends and some cash? No? That's fine too! We've got options for you, friend!
 
+## Live site
+[I'm Bored!](https://im-bored-app-main.netlify.app)
+
 ## Built in React, utilizing data from BoredAPI
 BoredAPI:
 https://www.boredapi.com
