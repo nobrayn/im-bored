@@ -1,15 +1,15 @@
 # I'm Bored!
-Not sure what to do with your time? Got some friends and some cash? No? That's fine too! We've got options for you, friend!
+Not sure what to do with your time? Got some friends and some cash? No? That's fine too! We've got options for you, friend! Choose what type of entertainment you are looking for, your budget, and whether or not you want to involve a friend or two and let the I'm Bored app offer up some suggestions! I couldn't resist making a [Commodore-64]{https://www.c64-wiki.com/images/c/c9/Einschaltmeldung_C64.jpg}-esque design for this project, complete with CRT screen emulation, and some chiptune music for your listening pleasure.
 
 ## Live site
 [I'm Bored!](https://im-bored-app-main.netlify.app)
 
-## Built in React, utilizing data from BoredAPI
+## Built in React.js, utilizing data from BoredAPI
 BoredAPI:
 https://www.boredapi.com
 
 ### Built (by me, Chris) at Juno College of Technology, 2023.
-www.nobrayn.com
+www.nobrayn.com <- my portfolio (go look, it's fun)
 
 ### Additional Thanks
 Amazing (and toggleable for accessibility) CRT Monitor emulation effect in CSS courtesy of:
