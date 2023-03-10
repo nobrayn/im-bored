@@ -19,6 +19,10 @@ Customizeable alerts (hopefully you don't see Elmo, but if you do... at least it
 https://sweetalert2.github.io/
 
 ### Screenshots
-![image](https://user-images.githubusercontent.com/92102282/224420852-c18d4c88-bae6-4c70-80ed-8dc46d36a18a.png)
-![image](https://user-images.githubusercontent.com/92102282/224421012-cc22344a-1e70-4afc-9e48-c61e30e820ef.png)
-![image](https://user-images.githubusercontent.com/92102282/224421062-a829994c-a4b0-4552-84ee-cb256b26f866.png)
+<table>
+  <tr>
+    <td>![image](https://user-images.githubusercontent.com/92102282/224420852-c18d4c88-bae6-4c70-80ed-8dc46d36a18a.png)</td>
+    <td>![image](https://user-images.githubusercontent.com/92102282/224421012-cc22344a-1e70-4afc-9e48-c61e30e820ef.png)</td>
+    <td>![image](https://user-images.githubusercontent.com/92102282/224421062-a829994c-a4b0-4552-84ee-cb256b26f866.png)</td>
+  </tr>
+</table>
