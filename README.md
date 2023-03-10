@@ -1,5 +1,5 @@
 # I'm Bored!
-Not sure what to do with your time? Got some friends and some cash? No? That's fine too! We've got options for you, friend! Choose what type of entertainment you are looking for, your budget, and whether or not you want to involve a friend or two and let the I'm Bored app offer up some suggestions! I couldn't resist making a [https://www.c64-wiki.com/images/c/c9/Einschaltmeldung_C64.jpg](Commodore-64)-esque design for this project, complete with CRT screen emulation, and some chiptune music for your listening pleasure.
+Not sure what to do with your time? Got some friends and some cash? No? That's fine too! We've got options for you, friend! Choose what type of entertainment you are looking for, your budget, and whether or not you want to involve a friend or two and let the I'm Bored app offer up some suggestions! I couldn't resist making a [Commodore 64-esque](https://www.c64-wiki.com/images/c/c9/Einschaltmeldung_C64.jpg) design for this project, complete with CRT screen emulation, and some chiptune music for your listening pleasure.
 
 ## Live site
 [I'm Bored!](https://im-bored-app-main.netlify.app)
