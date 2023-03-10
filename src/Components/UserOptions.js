@@ -69,7 +69,7 @@ const UserOptions = (props) => {
                       {/* group: minparticipants=3&maxparticipants=6 */}
                       <option value="group">You and some friends</option>
                     </select>
-                    // if disableNumberMenu is true/truthy, return this expression which sets the value to "solo" and visually greys out the button while disallowing it click events with  pointerEvents being set to 'none'.
+                    // if disableNumberMenu is true/truthy, return this expression which sets the value to "solo" and visually greys out the button while disallowing click events with pointerEvents being set to 'none'.
                   ) : (
 
                     <select value={userNumberChoice} onChange={handleUserNumberChoice} style={{ color: 'grey', pointerEvents: 'none' }} name="people" id="people">

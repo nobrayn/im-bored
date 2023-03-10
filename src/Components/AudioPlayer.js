@@ -1,35 +1,36 @@
-import React, { Component } from "react";
-import { Howl, Howler } from "howler"
+import React, { useState } from "react";
+import { Howl, } from "howler"
 import chiptune from "../audio/chiptune.mp3"
 
-const audioClip = { sound: chiptune, label: 'Music On/Off' };
+const audioClip = { sound: chiptune };
 
-class AudioPlayer extends Component {
-  soundPlay = (src) => {
-    const sound = new Howl({
-      src
-    })
-    sound.play();
-  }
+const AudioPlayer = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [sound, setSound] = useState(null);
 
-  RenderButtonAndSound = (soundObj) => {
-    // console.log("working")
-    return (
+  const soundPlay = (src) => {
+    if (!sound) {
+      const newSound = new Howl({ src });
+      setSound(newSound);
+      setIsPlaying(true);
+      newSound.play();
+    } else if (isPlaying) {
+      sound.pause();
+      setIsPlaying(false);
+    } else {
+      sound.play();
+      setIsPlaying(true);
+    }
+  };
+
+  return (
+    <div className="AudioPlayer">
       <button onClick={(e) => {
         e.preventDefault();
-        this.soundPlay(soundObj.sound)
-      }}>{soundObj.label}</button>
-      
-    );
-  }
+        soundPlay(audioClip.sound);
+      }}>{isPlaying ? "Pause Music" : "Play Music"}</button>
+    </div>
+  );
+};
 
-  render() {
-    Howler.volume(1.0);
-    return (
-      <div className="AudioPlayer">
-        {this.RenderButtonAndSound(audioClip)}
-      </div>
-    );
-  }
-}
 export default AudioPlayer;
