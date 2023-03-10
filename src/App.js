@@ -5,6 +5,7 @@ import withReactContent from 'sweetalert2-react-content'
 
 // components
 import UserOptions from './Components/UserOptions';
+import AudioPlayer from './Components/AudioPlayer';
 
 // stylesheet
 import './styles/sass/App.scss'
@@ -93,17 +94,16 @@ function App() {
       if (response.data.error) {
         // error handle via sweetalerts
         MySwal.fire({
-          button: "Aw crap.",
           text: 'No activities available with chosen parameters. Please try another combination.',
           imageUrl: 'https://gifdb.com/images/high/elmo-fire-8-bit-pixel-art-uxu21gbmbqrftrm3.gif',
-          imageWidth: 350,
-          imageHeight: 250,
+          // imageWidth: 350,
+          // imageHeight: 250,
           imageAlt: '8-bit elmo on fire',
           heightAuto: false
         })
-        .then(() => {
-          handleStartOverAlert()
-        })
+          .then(() => {
+            handleStartOverAlert()
+          })
       };
 
     } catch (error) {
@@ -179,7 +179,13 @@ function App() {
                   className='startOver'
                   onClick={handleStartOver}>Start over?</button>
               </div>
-              <button className="crtBtn" onClick={() => setShowStyling(!showStyling)}>Toggle CRT Effect!</button>
+              <div className="funBtns">
+                <AudioPlayer />
+                <button className="crtBtn" onClick={(e) => {
+                  e.preventDefault();
+                  setShowStyling(!showStyling);
+                }}>Toggle CRT Effect!</button>
+              </div>
             </div>
           </div>
         )}

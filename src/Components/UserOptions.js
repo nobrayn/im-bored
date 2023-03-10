@@ -1,3 +1,7 @@
+// components
+import AudioPlayer from './AudioPlayer';
+
+
 const UserOptions = (props) => {
   const { showForm,
     handleUserTypeChoice,
@@ -65,7 +69,7 @@ const UserOptions = (props) => {
                       {/* group: minparticipants=3&maxparticipants=6 */}
                       <option value="group">You and some friends</option>
                     </select>
-                    // if disableNumberMenu is true/truthy, return this expression which sets the value to "solo" and visually greys out the button while disallowing it click events with  pointerEvents being set to 'none'.
+                    // if disableNumberMenu is true/truthy, return this expression which sets the value to "solo" and visually greys out the button while disallowing click events with pointerEvents being set to 'none'.
                   ) : (
 
                     <select value={userNumberChoice} onChange={handleUserNumberChoice} style={{ color: 'grey', pointerEvents: 'none' }} name="people" id="people">
@@ -76,11 +80,14 @@ const UserOptions = (props) => {
                 </div> {/* end of block */}
               </div> {/* end of formContainer */}
 
-              <button className="crtBtn" onClick={(e) => {
-                e.preventDefault();
-                setShowStyling(!showStyling);
-              }}>Toggle CRT Effect!</button>
-              <button onClick={handleSubmit} className="submit">Submit</button>
+              <div className="funBtns">
+                <button onClick={handleSubmit} className="submit">Submit</button>
+                <AudioPlayer />
+                <button className="crtBtn" onClick={(e) => {
+                  e.preventDefault();
+                  setShowStyling(!showStyling);
+                }}>Toggle CRT Effect!</button>
+              </div>
             </form>
           </div>
         </div>
