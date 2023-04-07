@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Howl, } from "howler"
+import { React, useState } from "react";
+import { Howl } from "howler"
 import chiptune from "../audio/chiptune.mp3"
 
 const audioClip = { sound: chiptune };
