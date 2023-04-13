@@ -24,5 +24,6 @@ https://sweetalert2.github.io/
     <td><img src="https://user-images.githubusercontent.com/92102282/224420852-c18d4c88-bae6-4c70-80ed-8dc46d36a18a.png" alt="Screenshot of bored app home page showing user options" /></td>
     <td><img src="https://user-images.githubusercontent.com/92102282/224421012-cc22344a-1e70-4afc-9e48-c61e30e820ef.png" alt="Screenshot of bored app results page showing an activity suggestion" /></td>
     <td><img src="https://user-images.githubusercontent.com/92102282/224421062-a829994c-a4b0-4552-84ee-cb256b26f866.png" alt="Screenshot of error page shown when no results are available for chosen criteria" /></td>
+    <td><img src="https://user-images.githubusercontent.com/92102282/231848559-52527a2b-ad06-42cd-b3cc-1b975376faa2.png" alt="Wider screen version of home page preview" /></td>
   </tr>
 </table>
