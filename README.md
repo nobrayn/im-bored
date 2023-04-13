@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# I'm Bored!
+Not sure what to do with your time? Got some friends and some cash? No? That's fine too! We've got options for you, friend! Choose what type of entertainment you are looking for, your budget, and whether or not you want to involve a friend or two and let the I'm Bored app offer up some suggestions! I couldn't resist making a [Commodore 64-esque](https://www.c64-wiki.com/images/c/c9/Einschaltmeldung_C64.jpg) design for this project, complete with CRT screen emulation, and some chiptune music for your listening pleasure.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live site
+[I'm Bored!](https://im-bored-app-main.netlify.app)
 
-## Available Scripts
+## Built in React.js, utilizing data from BoredAPI
+BoredAPI:
+https://www.boredapi.com
 
-In the project directory, you can run:
+### Built (by me, Chris) at Juno College of Technology, 2023.
+www.nobrayn.com <- my portfolio (go look, it's fun)
 
-### `npm start`
+### Additional Thanks
+Amazing (and toggleable for accessibility) CRT Monitor emulation effect in CSS courtesy of:
+http://aleclownes.com/2017/02/01/crt-display.html
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Customizeable alerts (hopefully you don't see Elmo, but if you do... at least it looks good!) courtesy of sweetalert2:
+https://sweetalert2.github.io/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Screenshots
+<table>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/92102282/224420852-c18d4c88-bae6-4c70-80ed-8dc46d36a18a.png" alt="Screenshot of bored app home page showing user options" /></td>
+    <td><img src="https://user-images.githubusercontent.com/92102282/224421012-cc22344a-1e70-4afc-9e48-c61e30e820ef.png" alt="Screenshot of bored app results page showing an activity suggestion" /></td>
+    <td><img src="https://user-images.githubusercontent.com/92102282/224421062-a829994c-a4b0-4552-84ee-cb256b26f866.png" alt="Screenshot of error page shown when no results are available for chosen criteria" /></td>
+  </tr>
+</table>
