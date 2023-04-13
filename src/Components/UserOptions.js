@@ -1,9 +1,9 @@
 // components
 import AudioPlayer from './AudioPlayer';
 
-
 const UserOptions = (props) => {
-  const { showForm,
+  const { 
+    showForm,
     handleUserTypeChoice,
     handleUserPriceChoice,
     handleUserNumberChoice,
